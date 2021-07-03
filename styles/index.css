@@ -1,0 +1,70 @@
+/* Global */
+
+/* * {
+    border: 2px solid red;;
+  } */
+
+html {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.btn {
+  padding: 7px 12px;
+  display: block;
+  font-family: inherit;
+  font-size: .8rem;
+  color: #fff;
+  background-color: #567b95;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(50, 104, 145);
+}
+
+/* Header */
+
+.topbar {
+  position: fixed;
+  width: 100%;
+  padding: .5em;
+  display: grid;
+  grid-template-columns: 30px 30px 150px 1fr 100px 80px;
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.name-section {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    grid-template-columns: 30px 30px 1fr 100px 100px;
+    grid-gap: 5px;
+  }
+
+  .name-section {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .topbar {
+    grid-template-columns: 30px 1fr 100px;
+  }
+
+  .search-icon,
+  .subscribe-btn {
+    display: none;
+  }
+}

@@ -1,8 +1,8 @@
 /* Global */
 
-/* * {
+* {
     border: 2px solid red;;
-  } */
+  }
 
 html {
   font-family: 'Libre Franklin', sans-serif;
@@ -201,7 +201,8 @@ article {
 /* Article Body */
 
 .article-paragraph {
-  margin-bottom: 1em;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 .nyt-divider {
@@ -225,7 +226,62 @@ article {
 .nyt-divider::before,
 .nyt-divider::after {
   content: '';
-  width: 20%;
+  width: 10%;
   height: 1px;
-  color: rgb(224,222,222);
+  background-color: rgb(204,204,204);
+}
+
+/* Inflation Theory */
+
+.inflation-theory {
+  margin: auto;
+  max-width: 100%;
+}
+
+.inflation-theory > img {
+  width: inherit;
+}
+
+/* Aside Editors' Picks */
+
+aside {
+  position: absolute;
+  top: 1600px;
+  right: 1em;
+  margin-right: 2em;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.editors-picks-title {
+  padding-bottom: .5em;
+  border-bottom: 1px solid rgb(204,204,204);
+}
+
+.editor-article {
+  display: flex;
+  align-items: start;
+  cursor: pointer;
+}
+
+.editor-article > img {
+  margin-top: 1em;
+  margin-right: .5em;
+  width: 75px;
+  height: 75px;
+}
+
+.editor-article > p {
+  margin-top: 1em;
+  align-self: center;
+  font-size: .9rem;
+  font-weight: bold;
+  line-height: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  aside {
+    display: none;
+  }
 }

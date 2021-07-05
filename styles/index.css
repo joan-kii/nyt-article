@@ -1,8 +1,8 @@
 /* Global */
 
-* {
+/* * {
     border: 2px solid red;;
-  }
+  } */
 
 html {
   font-family: 'Libre Franklin', sans-serif;
@@ -89,7 +89,7 @@ main {
   position: relative;
   top: 120px;
   margin: auto;
-  width: 800px;
+  width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,7 +177,7 @@ figcaption {
 
 article {
   margin-top: 1em;
-  width: 90%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,12 +234,11 @@ article {
 /* Inflation Theory */
 
 .inflation-theory {
-  margin: auto;
-  max-width: 100%;
 }
 
-.inflation-theory > img {
-  width: inherit;
+.inflation-title {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 /* Aside Editors' Picks */

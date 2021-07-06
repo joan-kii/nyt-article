@@ -259,6 +259,7 @@ article {
 .item {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .text-item {
@@ -293,23 +294,23 @@ article {
 }
 
 .img-item-4 {
-  background-position: 101% 0%;
+  background-position: 100% 0%;
 }
 
 .img-item-5 {
-  background-position: 0% 25%;
+  background-position: 0% 70%;
 }
 
 .img-item-6 {
-  background-position: 25% 50%;
+  background-position: 34% 70%;
 }
 
 .img-item-7 {
-  background-position: 0% 0%;
+  background-position: 68% 70%;
 }
 
 .img-item-8 {
-  background-position: 0% 0%;
+  background-position: 100% 70%;
 }
 
 .infographic-authors {
@@ -327,12 +328,83 @@ article {
 }
 
 .infographic-authors::before {
-  content: ' ';
+  content: '';
   width: 60px;
   height: 1px;
   background-color: #000;
 }
 
+@media screen and (max-width: 1000px) {
+  .inflation-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  
+  .inflation-title,
+  .inflation-intro,
+  .inflation-grid,
+  .infographic-authors {
+    padding: 0 1em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inflation-grid {
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(8, 1fr);
+  }
+
+  .inflation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inflation-intro {
+    width: 300px;
+  }
+}
+
+/* Youtube Embed and Antenna Image */
+
+.youtube-figure {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.youtube-caption,
+.image-caption {
+  font-size: .8rem;
+  color: #666;
+}
+
+.youtube-caption > span,
+.image-caption > span {
+  font-size: .6rem;
+}
+
+.close-article {
+  margin-top: 2em;
+  display: inline-block;
+  font-size: .7rem;
+  color: #666;
+}
+
+/* Comments */
+
+.comments {
+  margin-top: 1em;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.comments-btn {
+  margin-left: 0;
+  width: 312px;
+  height: 32px;
+}
 /* Aside Editors' Picks */
 
 aside {

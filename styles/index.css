@@ -68,7 +68,7 @@ p {
 }
 
 @media (max-width: 720px) {
-  .name-section {
+  .section-name {
     display: none;
   }
 }
@@ -404,6 +404,97 @@ article {
   margin-left: 0;
   width: 312px;
   height: 32px;
+}
+
+/* Bottom Suggestions */
+
+.bottom-suggestions {
+  position: relative;
+  top: 120px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 462px;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:"newsletters popular"
+                      "astronomy   popular"
+                      "picks       popular";
+  grid-gap: 30px;
+}
+
+.bottom-suggestions h3 {
+  padding-bottom: 1em;
+}
+
+.newsletters-suggested {
+  grid-area: newsletters;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid black;
+}
+
+.newsletters-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide-suggestions {
+  font-size: .9rem;
+  color: rgb(102,102,102);
+}
+
+.suggestions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.suggestion-card {
+  width: 30%;
+  padding: .8em;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+}
+
+.header-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.suggestion-card img {
+  width: 90px;
+}
+
+.space-astronomy {
+  grid-area: astronomy;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 1px solid black;
+}
+
+.most-popular {
+  grid-area: popular;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 1px solid black;
+}
+
+.popular-article {
+  padding: .8em .3em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  border-top: 1px solid lightgray;
+}
+
+.editors-picks {
+  grid-area: picks;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 1px solid black;
 }
 /* Aside Editors' Picks */
 

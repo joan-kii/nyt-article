@@ -1,9 +1,10 @@
 /* Global */
 
-/* *,
-div {
+*,
+div,
+section {
     border: 2px solid red;
-  } */
+  }
 
 html {
   font-family: 'Libre Franklin', sans-serif;
@@ -433,10 +434,11 @@ article {
   padding-bottom: 1em;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   border-top: 1px solid black;
 }
 
-.newsletters-header {
+.suggestions-header {
   display: flex;
   justify-content: space-between;
 }
@@ -459,20 +461,93 @@ article {
   border: 1px solid lightgray;
 }
 
+.suggestion-card img {
+  width: 90px;
+}
+
+.suggestion-card a {
+  font-size: .9rem;
+  font-weight: bold;
+  color: #567b95;
+}
+
 .header-card {
   display: flex;
   justify-content: space-between;
 }
 
-.suggestion-card img {
-  width: 90px;
+.card-title {
+  font-size: .8rem;
+  color: #666;
+}
+
+.card-text h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.card-para {
+  margin-top: .8em;
+  height: 120px;
+  font-size: 1.05rem;
+  line-height: 1rem;
+  color: #666;
 }
 
 .space-astronomy {
-  grid-area: astronomy;
+  grid-area: astronomy;    
+}
+
+.editors-picks {
+  grid-area: picks;    
+}
+
+.space-astronomy
+.editors-picks {
   padding-top: 1em;
   padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   border-top: 1px solid black;
+}
+
+.articles-grid {
+  padding-left: 1em;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articles-grid img {
+  width: 100%;
+}
+
+.article-item {
+  padding: 1em;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.credit-img {
+  text-align: right;
+  font-size: .7rem;
+  line-height: 1rem;
+  color: #999;
+}
+
+.article-item-title {
+  margin: .4em 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+}
+
+.article-item-date {
+  font-size: .9rem;
+  color: #999;
 }
 
 .most-popular {
@@ -496,6 +571,24 @@ article {
   padding-bottom: 1em;
   border-top: 1px solid black;
 }
+
+@media screen and (max-width: 1170px) {
+  .bottom-suggestions {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:"newsletters"
+                        "astronomy"
+                        "picks"
+                        "popular";
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .bottom-suggestions {
+    width: 100%;
+  }
+}
+
 /* Aside Editors' Picks */
 
 aside {

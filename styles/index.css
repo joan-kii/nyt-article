@@ -3,14 +3,13 @@
 *,
 div,
 section {
-    border: 2px solid red;
-  }
+  border: 2px solid red;
+}
 
 html {
   font-family: 'Libre Franklin', sans-serif;
   color: #333;
 }
-
 a {
   text-decoration: none;
   color: #000;
@@ -57,7 +56,7 @@ p {
   margin-left: 1em;
 }
 
-.name-section {
+.section-name {
   margin: 0 1em;
   font-size: .8rem;
   font-weight: bold;
@@ -68,13 +67,13 @@ p {
   text-align: center;
 }
 
-@media (max-width: 720px) {
+@media screen and (max-width: 720px) {
   .section-name {
     display: none;
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .search-icon,
   .subscribe-btn {
     display: none;
@@ -91,7 +90,7 @@ main {
   position: relative;
   top: 120px;
   margin: auto;
-  width: 1000px;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,7 +147,7 @@ figcaption {
   margin-top: .7rem;
   margin-bottom: .7rem;
   padding-left: 2.3em;
-  width: 650px;
+  width: 100%;
   align-self: start;
 }
 
@@ -180,7 +179,7 @@ figcaption {
 
 article {
   margin-top: 1em;
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -498,12 +497,12 @@ article {
   grid-area: astronomy;    
 }
 
-.editors-picks {
+.editors-suggestions {
   grid-area: picks;    
 }
 
-.space-astronomy
-.editors-picks {
+.space-astronomy,
+.editors-suggestions {
   padding-top: 1em;
   padding-bottom: 1em;
   display: flex;
@@ -565,13 +564,6 @@ article {
   border-top: 1px solid lightgray;
 }
 
-.editors-picks {
-  grid-area: picks;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-top: 1px solid black;
-}
-
 @media screen and (max-width: 1170px) {
   .bottom-suggestions {
     grid-template-columns: 1fr;
@@ -583,9 +575,14 @@ article {
   }
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 650px) {
   .bottom-suggestions {
-    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .suggestions {
+    flex-wrap: wrap;
   }
 }
 

@@ -1,8 +1,14 @@
-/* Global */
-
-/* * {
+/* 
+/ /// Box Model ///
+/ 
+* {
   outline: 2px solid red;
-} */
+} 
+/
+/
+*/ 
+
+/* Global */
 
 html {
   font-family: 'Libre Franklin', sans-serif;
@@ -200,8 +206,8 @@ article {
 
 .author-details {
   margin-bottom: 1em;
-  padding-bottom: 3em;
-  width: 55%;
+  padding-bottom: .5em;
+  width: 45%;
   font-size: .9rem;
   font-weight: 300;
   line-height: 2em;
@@ -761,4 +767,56 @@ aside {
 .link-icon {
   width: 16px;
   height: 16px;
+}
+
+.link-divider {
+  margin-top: .5em;
+  padding-top: .5em;
+  border-top: 1px solid lightgray;
+}
+
+@media screen and (max-width: 850px) {
+  .fifth-column {
+    display: none;
+  }  
+} 
+
+@media screen and (max-width: 700px) {
+  .fourth-column {
+    display: none;
+  }  
+} 
+
+@media screen and (max-width: 600px) {
+  .third-column {
+    display: none;
+  }  
+} 
+
+@media screen and (max-width: 470px) {
+  .second-column {
+    display: none;
+  }  
+} 
+
+/* Footer */
+
+footer {
+  position: relative;
+  top: 120px;
+  margin: .5em auto;
+  padding-top: .5em;
+  width: 90%;
+}
+
+.foot-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  margin-right: .5em;
+  font-size: .7rem;
+  color: #666;
 }

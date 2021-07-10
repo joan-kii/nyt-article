@@ -1,1 +1,1 @@
-# nyt-article
+A New York Times article clone built using HTML5 and CSS3 as part of The Odin Project Course. Making use of FlexBox and Grid. Compiled with Gulp Autoprefixer. You can visit the site [here](https://joan-kii.github.io/nyt-article).

@@ -1,0 +1,23 @@
+{
+  "name": "nyt-article",
+  "version": "1.0.0",
+  "description": "The Odin Project HTML/CSS Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joan-kii/nyt-article.git"
+  },
+  "author": "joankii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joan-kii/nyt-article/issues"
+  },
+  "homepage": "https://github.com/joan-kii/nyt-article#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0"
+  }
+}

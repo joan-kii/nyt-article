@@ -1,10 +1,8 @@
 /* Global */
 
-*,
-div,
-section {
-  border: 2px solid red;
-}
+/* * {
+  outline: 2px solid red;
+} */
 
 html {
   font-family: 'Libre Franklin', sans-serif;
@@ -39,6 +37,11 @@ p {
 }
 
 /* Header */
+
+.header {
+  width: 100%;
+  height: 47px;
+}
 
 .topbar {
   position: fixed;
@@ -88,9 +91,9 @@ p {
 
 main {
   position: relative;
-  top: 120px;
+  top: 12px;
   margin: auto;
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,9 +102,10 @@ main {
 /* Article Header */
 
 .article-header {
-  width: 600px;
+  width: 40%;
   display: flex;
   flex-direction: column;
+  align-items: start;
 }
 
 .title {
@@ -115,7 +119,6 @@ main {
 .share-icons {
   padding-top: .5em;
   padding-bottom: 20px;
-  width: 20%;
   display: flex;
 }
 
@@ -131,7 +134,6 @@ main {
 /* Main Image */
 
 figure {
-  margin: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -147,8 +149,8 @@ figcaption {
   margin-top: .7rem;
   margin-bottom: .7rem;
   padding-left: 2.3em;
-  width: 100%;
-  align-self: start;
+  width: 55%;
+  align-self: center;
 }
 
 .caption {
@@ -173,23 +175,33 @@ figcaption {
     width: 100%;
     height: auto;
   }
+
+  figcaption {
+    width: 100%;
+  }
 }
 
 /* Author and Date */
 
 article {
-  margin-top: 1em;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.article-body {
+  margin-top: 1em;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 .author-details {
   margin-bottom: 1em;
   padding-bottom: 3em;
-  width: 100%;
-  align-self: start;
+  width: 55%;
   font-size: .9rem;
   font-weight: 300;
   line-height: 2em;
@@ -233,7 +245,42 @@ article {
   background-color: rgb(204,204,204);
 }
 
+@media screen and (max-width: 1100px) {
+  .article-body,
+  .article-header {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    top: 75px;
+  }
+  .article-body,
+  .article-header {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    top: 50px;
+  }
+  .article-body,
+  .article-header {
+    width: 95%;
+  }
+
+  .author-details {
+    width: 100%;
+  }
+}
+
 /* Inflation Theory */
+
+.inflation-section {
+  width: 90%;
+}
 
 .inflation-title {
   margin-top: 1em;
@@ -334,7 +381,7 @@ article {
   background-color: #000;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .inflation-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -368,8 +415,14 @@ article {
 /* Youtube Embed and Antenna Image */
 
 .youtube-figure {
+  width: 100%;
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.youtube-figure iframe {
+  width: 100%;
+  height: 450px;
 }
 
 .youtube-caption,
@@ -383,6 +436,11 @@ article {
   font-size: .6rem;
 }
 
+.antenna-img {
+  width: 55vw;
+  height: 100%;
+}
+
 .close-article {
   margin-top: 2em;
   display: inline-block;
@@ -394,7 +452,7 @@ article {
 
 .comments {
   margin-top: 1em;
-  width: 80%;
+  width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -404,6 +462,12 @@ article {
   margin-left: 0;
   width: 312px;
   height: 32px;
+}
+
+@media screen and (max-width: 700px) {
+  .comments {
+    width: 100%;
+  }
 }
 
 /* Bottom Suggestions */
@@ -581,8 +645,8 @@ article {
     padding-right: 0;
   }
 
-  .suggestions {
-    flex-wrap: wrap;
+  .newsletters-suggested {
+    display: none;
   }
 }
 
@@ -628,4 +692,73 @@ aside {
   aside {
     display: none;
   }
+}
+
+/* Links Section */
+
+.links-section {
+  position: relative;
+  top: 120px;
+  margin: auto;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-links-section {
+  padding-bottom: .5em;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
+.double-line {
+  margin-bottom: .5em;
+  width: 100%;
+  height: 5px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.top-links-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.link-home {
+  font-size: .9rem;
+  color: #567b95;
+}
+
+.nav-links {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.last-column {
+  padding-left: 1em;
+  border-left: 1px solid lightgray;
+}
+
+.link {
+  font-size: .9rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.link-title,
+.link-bold {
+  font-weight: bold;
+}
+
+.link-bold {
+  font-size: 1.1rem;
+}
+
+.link-icon {
+  width: 16px;
+  height: 16px;
 }

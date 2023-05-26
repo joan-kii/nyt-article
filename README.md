@@ -1,1 +1,7 @@
-A New York Times article clone built using HTML5 and CSS3 as part of The Odin Project Course. Making use of FlexBox and Grid. You can visit the site [here](https://joan-kii.github.io/nyt-article).
+## [Live Demo](https://joan-kii.github.io/nyt-article)
+
+## The Odin Project Exercise cloning a New York Times article.
+
+### Built with
+ - HTML
+ - CSS
